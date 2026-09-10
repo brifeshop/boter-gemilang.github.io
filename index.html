@@ -25,10 +25,38 @@
 <body>
 
     <!-- Wadah Header/Navbar Modular -->
-    <div id="header-container"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2 text-white" href="index.html">
+                <i class="bi bi-dna text-info fs-4"></i> Boter Gemilang Lab
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item">
+                        <a id="nav-home" class="nav-link active" href="index.html"><i class="bi bi-house me-1"></i> Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-publications" class="nav-link" href="publikasi.html"><i class="bi bi-journal-text me-1"></i> Publikasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-insights" class="nav-link" href="insights.html"><i class="bi bi-lightbulb me-1"></i> Insights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-kolaborasi" class="nav-link" href="kolaborasi.html"><i class="bi bi-handshake me-1"></i> Kolaborasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-contact" class="nav-link" href="kontak.html"><i class="bi bi-envelope me-1"></i> Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section (Fokus Utama: Publisitas Karya) -->
-    <header class="hero-section text-white py-5 bg-dark position-relative">
+    <header class="hero-section text-white py-5 bg-dark position-relative" style="margin-top: 70px;">
         <div class="container text-center py-4">
             <span class="badge bg-info text-dark px-3 py-2 rounded-pill fw-semibold mb-3">
                 <i class="bi bi-journal-check me-1"></i> Academic & Publication Repository
@@ -183,8 +211,8 @@
                     <a href="kolaborasi.html" class="btn btn-info btn-lg px-4 fw-bold text-dark rounded-3 shadow mb-2 w-100 w-lg-auto">
                         <i class="bi bi-people-fill me-2"></i>Ajukan Kolaborasi
                     </a>
-                    <a href="mailto:research@botergemilang.github.io" class="btn btn-outline-light btn-md px-4 rounded-3 w-100 w-lg-auto">
-                        <i class="bi bi-envelope-at-fill me-2"></i>Kirim Email
+                    <a href="kontak.html" class="btn btn-outline-light btn-md px-4 rounded-3 w-100 w-lg-auto">
+                        <i class="bi bi-envelope-at-fill me-2"></i>Hubungi Kontak
                     </a>
                 </div>
             </div>

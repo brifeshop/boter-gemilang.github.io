@@ -27,17 +27,45 @@
 </head>
 <body>
 
-    <!-- Wadah Header -->
-    <div id="header-container"></div>
+    <!-- Wadah Header/Navbar Modular -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2 text-white" href="index.html">
+                <i class="bi bi-dna text-info fs-4"></i> Boter Gemilang Lab
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item">
+                        <a id="nav-home" class="nav-link" href="index.html"><i class="bi bi-house me-1"></i> Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-publications" class="nav-link" href="publikasi.html"><i class="bi bi-journal-text me-1"></i> Publikasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-insights" class="nav-link" href="insights.html"><i class="bi bi-lightbulb me-1"></i> Insights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-kolaborasi" class="nav-link active" href="kolaborasi.html"><i class="bi bi-handshake me-1"></i> Kolaborasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-contact" class="nav-link" href="kontak.html"><i class="bi bi-envelope me-1"></i> Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Header Banner Halaman Kolaborasi -->
-    <header class="hero-section text-center">
-            <div class="container">
+    <header class="hero-section text-center" style="margin-top: 70px;">
+        <div class="container">
             <span class="badge bg-white text-dark px-3 py-2 rounded-pill fw-semibold mb-3">
                 <i class="bi bi-people-fill text-primary me-1"></i> Academic & Research Partnership
             </span>
             <h1 class="fw-bold display-5 mb-3">Kolaborasi Riset & Inovasi</h1>
-                <p class="lead text-light opacity-75 mx-auto mb-0" style="max-width: 650px;">
+            <p class="lead text-light opacity-75 mx-auto mb-0" style="max-width: 650px;">
                 Membangun sinergi penelitian akademis dan terapan dari perumusan pertanyaan hingga publikasi dan pengelolaan data.
             </p>
         </div>
@@ -95,26 +123,18 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script Pemanggil Komponen Modular -->
+    <!-- Script Pemanggil Komponen Footer Modular -->
     <script>
-        // Fungsi untuk memasukkan komponen HTML terpisah
-        function loadComponent(id, file, activeNavId) {
+        function loadComponent(id, file) {
             fetch(file)
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById(id).innerHTML = data;
-                    if (activeNavId) {
-                        const activeEl = document.getElementById(activeNavId);
-                        if (activeEl) activeEl.classList.add('active');
-                    }
                 })
                 .catch(err => console.error('Gagal memuat komponen:', err));
         }
 
-        // Panggil header & footer saat halaman dibuka
         document.addEventListener("DOMContentLoaded", function() {
-            // Parameter ketiga mendefinisikan menu mana yang diaktifkan (misal: 'nav-kolaborasi' atau 'nav-home')
-            loadComponent('header-container', 'components/header.html', 'nav-kolaborasi');
             loadComponent('footer-container', 'components/footer.html');
         });
     </script>

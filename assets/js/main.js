@@ -43,34 +43,57 @@ function initPublications() {
     const publicationList = document.getElementById("publication-list");
     if (!publicationList) return;
 
-    // Pastikan data publikasi tersedia
     if (typeof publicationsData !== "undefined" && Array.isArray(publicationsData)) {
-        renderPublications(publicationsData, publicationList);
+        renderPublicationsList(publicationsData, publicationList);
         setupPublicationFilters(publicationsData, publicationList);
         
         const countElement = document.querySelector("[data-publication-count]");
-        if (countElement) countElement.textContent = `${publicationsData.length}+`;
+        if (countElement) countElement.textContent = `${publicationsData.length} Publikasi`;
     } else {
         publicationList.innerHTML = `<div class="alert alert-warning mb-0">Daftar publikasi belum dapat dimuat. Pastikan file publications-data.js sudah terhubung.</div>`;
     }
 }
 
-function renderPublications(publications, container, filter = "all") {
-    // Menyesuaikan logika filter dengan atribut role dan type
-    const visiblePublications = publications.filter((publication) => {
-        if (filter === "all") return true;
-        if (filter === "first-author" || filter === "co-author") return publication.role === filter;
-        if (filter === "international" || filter === "national") return publication.type === filter;
-        return true;
-    });
+function setupPublicationFilters(publications, container) {
+    const searchInput = document.getElementById("searchPublication");
+    const filterRole = document.getElementById("filterRole");
+    const filterScope = document.getElementById("filterScope");
+    const countElement = document.querySelector("[data-publication-count]");
 
-    if (!visiblePublications.length) {
-        container.innerHTML = `<div class="text-center text-muted py-4">Belum ada publikasi pada kategori ini.</div>`;
+    function applyFilters() {
+        const keyword = searchInput ? searchInput.value.toLowerCase().trim() : "";
+        const role = filterRole ? filterRole.value : "all";
+        const scope = filterScope ? filterScope.value : "all";
+
+        const filtered = publications.filter((pub) => {
+            const searchableText = [pub.title, pub.authors, pub.journal]
+                .filter(Boolean)
+                .join(" ")
+                .toLowerCase();
+            const matchKeyword = searchableText.includes(keyword);
+
+            const matchRole = (role === "all") || (pub.role === role);
+            const matchScope = (scope === "all") || (pub.type === scope);
+
+            return matchKeyword && matchRole && matchScope;
+        });
+
+        renderPublicationsList(filtered, container);
+        if (countElement) countElement.textContent = `${filtered.length} Publikasi`;
+    }
+
+    if (searchInput) searchInput.addEventListener("input", applyFilters);
+    if (filterRole) filterRole.addEventListener("change", applyFilters);
+    if (filterScope) filterScope.addEventListener("change", applyFilters);
+}
+
+function renderPublicationsList(publications, container) {
+    if (!publications.length) {
+        container.innerHTML = `<div class="text-center text-muted py-4">Belum ada publikasi yang sesuai dengan filter atau kata kunci tersebut.</div>`;
         return;
     }
 
-    container.innerHTML = visiblePublications.map((publication) => {
-        // Pembersihan string DOI
+    container.innerHTML = publications.map((publication) => {
         const cleanDoi = publication.doi ? publication.doi.replace(/^https?:\/\/doi\.org\//, '') : '';
         const publicationUrl = cleanDoi
             ? `https://doi.org/${cleanDoi}`
@@ -82,7 +105,6 @@ function renderPublications(publications, container, filter = "all") {
         const typeLabel = publication.role === "first-author" ? "First Author" : "Co-Author";
         const scopeLabel = publication.type === "international" ? "Jurnal Internasional" : "Jurnal Nasional";
 
-        // Menebalkan nama Gemilang Rahmadara
         const highlightedAuthors = publication.authors.replace(
             /Gemilang Rahmadara/g,
             "<strong>Gemilang Rahmadara</strong>"
@@ -119,17 +141,10 @@ function renderPublications(publications, container, filter = "all") {
     }).join("");
 }
 
-function setupPublicationFilters(publications, container) {
-    document.querySelectorAll("[data-filter]").forEach((button) => {
-        button.addEventListener("click", () => {
-            document.querySelectorAll("[data-filter]").forEach((filterButton) => filterButton.classList.remove("active"));
-            button.classList.add("active");
-            renderPublications(publications, container, button.dataset.filter);
-        });
-    });
+function renderPublications(publications, container) {
+    renderPublicationsList(publications, container);
 }
 
-// Fungsi untuk menyalin kutipan ke clipboard
 function copyCitation(elementId) {
     const element = document.getElementById(elementId);
     if (!element) return;
