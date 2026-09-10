@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: boter-gemilang.github.io # Sesuaikan dengan nama branch utama GitHub kamu (main / master)
+  branch: main # Sesuaikan dengan nama branch utama GitHub kamu (main / master)
 
 media_folder: "assets/images/uploads" # Tempat penyimpanan gambar yang di-upload
 public_folder: "assets/images/uploads" # Path panggilan gambar di kode HTML/JS
