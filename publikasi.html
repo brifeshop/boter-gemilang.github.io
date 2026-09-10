@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsip Publikasi Riset Lengkap | Gemilang Rahmadara</title>
+
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Arsip lengkap publikasi ilmiah, makalah jurnal, dan karya riset Gemilang Rahmadara di bidang Bioteknologi Molekuler dan Bioinformatika.">
+    <meta name="keywords" content="Gemilang Rahmadara, Publikasi, Jurnal, Bioteknologi, Bioinformatika, Genomik, BibTeX, Sitasi">
+    <meta name="author" content="Gemilang Rahmadara">
+    <link rel="canonical" href="https://boter-gemilang.github.io/publikasi.html">
+
+    <!-- Google Fonts, Bootstrap 5, & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <!-- Custom CSS Utama -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header/Navbar Modular -->
+    <div id="header-container"></div>
+
+    <!-- Header Halaman -->
+    <header class="bg-dark text-white py-5">
+        <div class="container text-center py-3">
+            <h1 class="fw-bold display-5 mb-2">Arsip Publikasi Ilmiah</h1>
+            <p class="lead text-light opacity-75 mx-auto mb-0" style="max-width: 700px;">
+                Eksplorasi seluruh karya tulis, artikel jurnal, dan pustaka riset mengenai Bioteknologi Molekuler dan Genomik Tanaman.
+            </p>
+        </div>
+    </header>
+
+    <!-- Content Utama -->
+    <main class="container my-5">
+
+        <!-- Bar Pencarian & Filter Tingkat Lanjut -->
+        <div class="card border-0 shadow-sm p-4 mb-4 bg-light">
+            <div class="row g-3">
+                <!-- Search Bar -->
+                <div class="col-lg-6">
+                    <label for="searchPublication" class="form-label fw-semibold small text-muted">Cari Judul / Kata Kunci / Jurnal</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+                        <input type="text" id="searchPublication" class="form-control border-start-0" placeholder="Ketik kata kunci (misal: DNA, EST-SSR, Typhonium)...">
+                    </div>
+                </div>
+                <!-- Filter Peran -->
+                <div class="col-sm-6 col-lg-3">
+                    <label for="filterRole" class="form-label fw-semibold small text-muted">Peran Penulis</label>
+                    <select id="filterRole" class="form-select">
+                        <option value="all">Semua Peran</option>
+                        <option value="first-author">First Author</option>
+                        <option value="co-author">Co-Author</option>
+                    </select>
+                </div>
+                <!-- Filter Skala Jurnal -->
+                <div class="col-sm-6 col-lg-3">
+                    <label for="filterScope" class="form-label fw-semibold small text-muted">Cakupan Jurnal</label>
+                    <select id="filterScope" class="form-select">
+                        <option value="all">Semua Cakupan</option>
+                        <option value="international">Internasional</option>
+                        <option value="national">Nasional Terakreditasi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daftar Publikasi -->
+        <section>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted small">Menampilkan seluruh karya terdaftar</span>
+                <span class="badge bg-primary rounded-pill px-3 py-2" id="totalCountBadge" data-publication-count>0 Publikasi</span>
+            </div>
+
+            <div id="publication-list" class="d-grid gap-4" aria-live="polite">
+                <div class="text-center text-muted py-5">
+                    <div class="spinner-border text-primary mb-2" role="status"></div>
+                    <p class="mb-0">Memuat katalog publikasi...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Modular -->
+    <div id="footer-container"></div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1090;">
+        <div id="copyToast" class="toast align-items-center text-bg-dark border-0 shadow" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i> Teks sitasi berhasil disalin!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/publications-data.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

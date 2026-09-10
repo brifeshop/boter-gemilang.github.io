@@ -1,0 +1,49 @@
+﻿:root {
+    --primary-color: #2563eb;
+    --accent-color: #06b6d4;
+    --dark-bg: #0f172a;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    /* Memberikan jarak atas setinggi header agar konten tidak tertutup */
+    padding-top: 70px; 
+}
+
+/* Mengunci wadah header agar benar-benar menempel diam di paling atas */
+#header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 70px;
+    z-index: 1030;
+}
+
+/* Styling Navbar */
+.custom-navbar {
+    background-color: var(--dark-bg) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1e3a8a 100%);
+    color: white;
+    padding: 80px 0;
+}
+
+/* Styling Card */
+.card-custom {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}

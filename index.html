@@ -3,471 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boter Gemilang Research Center</title>
+    <title>Gemilang Rahmadara | Publikasi Riset & Genomik Tanaman</title>
 
-    <!-- Meta Tags Akademis Google Scholar -->
-    <meta name="citation_title" content="Comparison of DNA Isolation Methods that Derived from Leaves of a Potential Anti-Cancer Rodent Tuber (Typhonium flagelliforme) Plant">
-    <meta name="citation_author" content="Rahmadara, Gemilang">
-    <meta name="citation_author" content="Hanifah, Nurul Fitri">
-    <meta name="citation_author" content="Rismayanti">
-    <meta name="citation_author" content="Purwoko, Devit">
-    <meta name="citation_author" content="Rochandi, Andi">
-    <meta name="citation_author" content="Tajuddin, Teuku">
-    <meta name="citation_publication_date" content="2022">
+    <!-- Meta Tags SEO & Academic Indexing Optimization -->
+    <meta name="description" content="Kumpulan publikasi dan portofolio riset Gemilang Rahmadara di bidang Bioteknologi Molekuler, Genomik Tanaman, dan Bioinformatika.">
+    <meta name="keywords" content="Gemilang Rahmadara, Publikasi Riset, Bioteknologi, Genomik, Bioinformatika, Typhonium flagelliforme, DNA Isolation">
+    <meta name="author" content="Gemilang Rahmadara">
+    <link rel="canonical" href="https://boter-gemilang.github.io/">
 
-    <!-- Fonts & Bootstrap -->
+    <!-- Google Fonts, Bootstrap 5, & Bootstrap Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --accent-color: #06b6d4;
-            --dark-bg: #0f172a;
-        }
+    <!-- Academic Icon Fonts (Academicons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #f8fafc;
-            color: #334155;
-        }
-
-        .custom-navbar {
-            background-color: #0f172a !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .navbar-dark .navbar-nav .nav-link {
-            color: rgba(255, 255, 255, 0.85);
-            font-weight: 500;
-        }
-
-        .navbar-dark .navbar-nav .nav-link:hover,
-        .navbar-dark .navbar-nav .nav-link.active {
-            color: #38bdf8;
-        }
-
-        .hero-section {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1e3a8a 100%);
-            color: white;
-            padding: 80px 0 90px;
-        }
-
-        /* Card Penulis Utama */
-        .featured-paper-card {
-            background: #ffffff;
-            border: 2px solid #2563eb;
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 24px;
-            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.12);
-        }
-
-        .paper-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .paper-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px -5px rgba(15, 23, 42, 0.08);
-            border-color: #cbd5e1;
-        }
-
-        /* Badges */
-        .badge-first-author { background: #2563eb; color: #ffffff; }
-        .badge-intl { background: #0e7490; color: #ffffff; }
-        .badge-national { background: #059669; color: #ffffff; }
-        .badge-conf { background: #d97706; color: #ffffff; }
-
-        .tag-badge {
-            font-size: 0.72rem;
-            font-weight: 700;
-            padding: 5px 12px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-custom-primary {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 6px 16px;
-            font-size: 0.875rem;
-            font-weight: 600;
-        }
-
-        .btn-custom-outline {
-            border: 1px solid #cbd5e1;
-            color: #475569;
-            border-radius: 8px;
-            padding: 6px 16px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            background: #fff;
-        }
-
-        .btn-custom-outline:hover {
-            background: #f1f5f9;
-            color: #0f172a;
-        }
-
-        .citation-box {
-            background-color: #f8fafc;
-            border-left: 4px solid var(--primary-color);
-            border-radius: 4px;
-        }
-
-        .sidebar-card {
-            background: #ffffff;
-            border-radius: 16px;
-            border: 1px solid #e2e8f0;
-            padding: 24px;
-        }
-
-        .avatar-circle-lg {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, #2563eb, #06b6d4);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .avatar-circle {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #64748b, #475569);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 0.875rem;
-        }
-    </style>
+    <!-- Custom CSS Utama -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Navigasi Utama -->
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center gap-2 text-white" href="#">
-                <i class="bi bi-dna text-info fs-4"></i> Boter Gemilang Lab
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto gap-2">
-                    <li class="nav-item"><a class="nav-link active" href="#publikasi"><i class="bi bi-journal-text me-1"></i> Publikasi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#proyek"><i class="bi bi-diagram-3 me-1"></i> Kolaborasi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tim"><i class="bi bi-people me-1"></i> Tim Peneliti</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kontak"><i class="bi bi-envelope me-1"></i> Kontak</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Wadah Header/Navbar Modular -->
+    <div id="header-container"></div>
 
-    <!-- Banner Utama -->
-    <header class="hero-section text-center">
-        <div class="container">
-            <span class="badge bg-white text-dark px-3 py-2 rounded-pill fw-semibold mb-3">
-                <i class="bi bi-stars text-primary me-1"></i> Plant Genomics & Molecular Biology Research
+    <!-- Hero Section (Fokus Utama: Publisitas Karya) -->
+    <header class="hero-section text-white py-5 bg-dark position-relative">
+        <div class="container text-center py-4">
+            <span class="badge bg-info text-dark px-3 py-2 rounded-pill fw-semibold mb-3">
+                <i class="bi bi-journal-check me-1"></i> Academic & Publication Repository
             </span>
-            <h1 class="fw-bold display-4 mb-3">Riset Genomik & Bioteknologi Tanaman</h1>
-            <p class="lead text-light opacity-75 mx-auto mb-4" style="max-width: 650px;">
-                Daftar publikasi karya ilmiah bereputasi internasional & nasional oleh <strong>Gemilang Rahmadara</strong> dan Tim Peneliti.
+            <h1 class="fw-bold display-4 mb-2">Gemilang Rahmadara</h1>
+            <p class="lead text-light opacity-75 mx-auto mb-4" style="max-width: 750px;">
+                Dokumentasi publikasi riset, penanda molekuler, dan analisis data genomik di bidang <strong>Bioteknologi Molekuler</strong> & <strong>Bioinformatika</strong>.
             </p>
+
+            <!-- Ringkasan Statistik / Metrics Langsung di Hero -->
+            <div class="row g-3 justify-content-center max-width-800 mx-auto mb-4">
+                <div class="col-6 col-md-3">
+                    <div class="p-3 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-25">
+                        <h3 class="fw-bold text-info mb-0" data-publication-count>0+</h3>
+                        <small class="text-light opacity-75">Publikasi Terdata</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-25">
+                        <h3 class="fw-bold text-info mb-0">First & Co</h3>
+                        <small class="text-light opacity-75">Peran Author</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-25">
+                        <h3 class="fw-bold text-info mb-0">SINTA / Scopus</h3>
+                        <small class="text-light opacity-75">Indeks Jurnal</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-25">
+                        <h3 class="fw-bold text-info mb-0">Open Access</h3>
+                        <small class="text-light opacity-75">Data Riset</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tautan Indexing Akademis -->
+            <div class="d-flex justify-content-center align-items-center gap-2 mb-4 flex-wrap">
+                <a href="https://scholar.google.com/scholar?q=%22Gemilang+Rahmadara%22" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3">
+                    <i class="ai ai-google-scholar me-1"></i> Google Scholar
+                </a>
+                <a href="https://orcid.org/orcid-search/search?searchQuery=Gemilang%20Rahmadara" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3">
+                    <i class="ai ai-orcid me-1 text-success"></i> ORCID Profile
+                </a>
+                <a href="https://www.scopus.com/results/authorNamesList.uri?searchString=Gemilang+Rahmadara" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3">
+                    <i class="ai ai-scopus me-1 text-info"></i> Scopus ID
+                </a>
+                <a href="https://www.researchgate.net/search/publication?q=Gemilang%20Rahmadara" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3">
+                    <i class="ai ai-researchgate me-1"></i> ResearchGate
+                </a>
+            </div>
+
             <div class="d-flex justify-content-center gap-3">
-                <a href="#publikasi" class="btn btn-custom-primary btn-lg"><i class="bi bi-book me-2"></i>Jelajahi Publikasi</a>
-                <a href="#kontak" class="btn btn-custom-outline btn-lg"><i class="bi bi-handshake me-2"></i>Kontak Riset</a>
+                <a href="publikasi.html" class="btn btn-info btn-lg fw-bold text-dark px-4 rounded-3 shadow-sm">
+                    <i class="bi bi-book me-2"></i>Eksplorasi Publikasi
+                </a>
+                <a href="kolaborasi.html" class="btn btn-outline-light btn-lg px-4 rounded-3">
+                    <i class="bi bi-people-fill me-2"></i>Peluang Kolaborasi
+                </a>
             </div>
         </div>
     </header>
 
-    <div class="container my-5">
-        <div class="row g-4">
-            
-            <!-- Daftar Publikasi Utama -->
-            <div class="col-lg-8" id="publikasi">
-                
-                <!-- PUBLIKASI UTAMA (Gemilang First Author) -->
-                <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h4 class="fw-bold m-0 text-primary"><i class="bi bi-star-fill me-2"></i>Penulis Utama (First Author)</h4>
-                </div>
+    <!-- Main Content -->
+    <main class="container my-5">
 
-                <div class="featured-paper-card">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <span class="tag-badge badge-first-author"><i class="bi bi-person-fill-check me-1"></i> First Author</span>
-                        <span class="text-muted small fw-semibold"><i class="bi bi-calendar3 me-1"></i> 2022</span>
-                    </div>
-                    <h5 class="fw-bold text-dark lh-base mb-2">
-                        Comparison of DNA Isolation Methods that Derived from Leaves of a Potential Anti-Cancer Rodent Tuber (Typhonium flagelliforme) Plant
-                    </h5>
-                    <p class="text-primary small mb-3 fw-bold">
-                        <i class="bi bi-person-circle me-1"></i> Gemilang Rahmadara*, Nurul Fitri Hanifah, Rismayanti, Devit Purwoko, Andi Rochandi, Teuku Tajuddin
-                    </p>
-                    <p class="text-secondary small mb-3">
-                        Studi komparatif metode isolasi DNA pada tanaman Keladi Tikus (*Typhonium flagelliforme*) untuk memperoleh isolat DNA genomik berkualitas tinggi yang optimal untuk analisis molekuler.
-                    </p>
-                    
-                    <div class="d-flex flex-wrap gap-2 mb-3">
-                        <a href="https://ijass.org" target="_blank" class="btn btn-sm btn-custom-primary"><i class="bi bi-journal-text me-1"></i> Akses Jurnal IJAS</a>
-                        <a href="https://scholar.google.com" target="_blank" class="btn btn-sm btn-custom-outline"><i class="bi bi-google me-1"></i> Scholar Link</a>
+        <!-- 1. SEKSI UTAMA: PUBLIKASI PILIHAN (SHOWCASE) -->
+        <section id="publikasi" class="py-4" style="scroll-margin-top: 80px;">
+            <div class="border-bottom pb-3 mb-4">
+                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center gap-3">
+                    <div>
+                        <h2 class="fw-bold text-dark mb-1"><i class="bi bi-journal-star text-primary me-2"></i>Publikasi Pilihan</h2>
+                        <p class="text-muted small mb-0">Sorotan beberapa karya ilmiah utama. Temukan seluruh pustaka riset di halaman arsip lengkap.</p>
                     </div>
 
-                    <div class="citation-box p-3 mb-2">
-                        <span class="d-block text-uppercase text-muted fw-bold style="font-size: 0.7rem;" mb-1">Sitasi APA:</span>
-                        <p class="small mb-0 text-dark">
-                            <strong>Rahmadara, G.</strong>, Hanifah, N. F., Rismayanti, Purwoko, D., Rochandi, A., & Tajuddin, T. (2022). Comparison of DNA Isolation Methods derived from leaves of a potential anti-cancer rodent tuber plant. <i>International Journal of Agriculture System</i>.
-                        </p>
+                    <!-- Tombol Menuju Halaman Arsip Lengkap -->
+                    <div>
+                        <a href="publikasi.html" class="btn btn-outline-primary btn-sm fw-semibold">
+                            Lihat Semua Publikasi <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
                     </div>
                 </div>
-
-                <!-- SEKSI PUBLIKASI INTERNASIONAL -->
-                <div class="d-flex align-items-center justify-content-between mb-3 mt-5">
-                    <h4 class="fw-bold m-0"><i class="bi bi-globe2 text-info me-2"></i>Publikasi Jurnal & Konferensi Internasional</h4>
-                </div>
-
-                <!-- Intl Paper 1 (2026 Chloroplast) -->
-                <div class="paper-card">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <span class="tag-badge badge-intl"><i class="bi bi-journal-check me-1"></i> Springer / NCBI</span>
-                        <span class="text-muted small fw-semibold"><i class="bi bi-calendar3 me-1"></i> 2026</span>
-                    </div>
-                    <h5 class="fw-bold text-dark lh-base mb-2">
-                        The complete chloroplast genome sequence of Typhonium flagelliforme, an anti-cancer medicinal plant: genome structure, comparative and phylogenetic relationship analysis within Araceae
-                    </h5>
-                    <p class="text-secondary small mb-3">
-                        <i class="bi bi-people me-1"></i> Suparjo, Teuku Tajuddin, Ani Kurniawati, Sobir, <strong>Gemilang Rahmadara</strong>
-                    </p>
-                    <p class="text-muted small mb-3"><i>Functional & Integrative Genomics</i>, 26(1), 54.</p>
-                    
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/41746433/" target="_blank" class="btn btn-sm btn-custom-primary"><i class="bi bi-journal-text me-1"></i> NCBI PubMed</a>
-                        <a href="https://doi.org/10.1007/s10142-026-01839-7" target="_blank" class="btn btn-sm btn-custom-outline"><i class="bi bi-link-45deg me-1"></i> DOI: 10.1007/s10142-026-01839-7</a>
-                    </div>
-                </div>
-
-                <!-- Intl Paper 2 (2025 First Short-read Genome) -->
-                <div class="paper-card">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <span class="tag-badge badge-intl"><i class="bi bi-journal-check me-1"></i> Springer Nature</span>
-                        <span class="text-muted small fw-semibold"><i class="bi bi-calendar3 me-1"></i> 2025</span>
-                    </div>
-                    <h5 class="fw-bold text-dark lh-base mb-2">
-                        First short-read genome assembly and simple sequence repeat (SSR) mining of Typhonium flagelliforme, an anti-cancer medicinal plant
-                    </h5>
-                    <p class="text-secondary small mb-3">
-                        <i class="bi bi-people me-1"></i> Devit Purwoko, Siti Zulaeha, <strong>Gemilang Rahmadara</strong>, Suparjo, Teuku Tajuddin, Syahnada Jaya Syaifullah
-                    </p>
-                    <p class="text-muted small mb-3"><i>Genetic Resources and Crop Evolution</i>.</p>
-                    
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://doi.org/10.1007/s10722-025-02661-z" target="_blank" class="btn btn-sm btn-custom-outline"><i class="bi bi-link-45deg me-1"></i> DOI: 10.1007/s10722-025-02661-z</a>
-                    </div>
-                </div>
-
-                <!-- Intl Paper 3 (2024 Sagu EST-SSR) -->
-                <div class="paper-card">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <span class="tag-badge badge-intl"><i class="bi bi-journal-check me-1"></i> Scopus / PMC</span>
-                        <span class="text-muted small fw-semibold"><i class="bi bi-calendar3 me-1"></i> 2024</span>
-                    </div>
-                    <h5 class="fw-bold text-dark lh-base mb-2">
-                        In silico EST-SSR Identification and Development through EST Sequences from Metroxylon sagu Rottb. for Genetic Diversity Analysis
-                    </h5>
-                    <p class="text-secondary small mb-3">
-                        <i class="bi bi-people me-1"></i> Devit Purwoko, Siti Zulaeha, Teuku Tajuddin, Farida Rosana Mira, Maharani Dewi Solikhah, <strong>Gemilang Rahmadara</strong>, Nurul Fitri Hanifah, Rusmanto
-                    </p>
-                    <p class="text-muted small mb-3"><i>Tropical Life Sciences Research</i>, 35(1), 13–32.</p>
-                    
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383630/" target="_blank" class="btn btn-sm btn-custom-primary"><i class="bi bi-download me-1"></i> PMC Fulltext</a>
-                        <a href="https://doi.org/10.21315/tlsr2024.35.1.2" target="_blank" class="btn btn-sm btn-custom-outline"><i class="bi bi-link-45deg me-1"></i> DOI Link</a>
-                    </div>
-                </div>
-
-                <!-- Intl Conference Paper (Jatropha AIP Proceedings) -->
-                <div class="paper-card">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <span class="tag-badge badge-conf"><i class="bi bi-easel me-1"></i> AIP Conference Proceedings</span>
-                        <span class="text-muted small fw-semibold"><i class="bi bi-calendar3 me-1"></i> 2022</span>
-                    </div>
-                    <h5 class="fw-bold text-dark lh-base mb-2">
-                        Identification of drought stress genes expressed in Jatropha curcas by using RNA sequencing
-                    </h5>
-                    <p class="text-secondary small mb-3">
-                        <i class="bi bi-people me-1"></i> Imam Cartealy, <strong>Gemilang Rahmadara</strong>, dkk.
-                    </p>
-                    
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://aip.scitation.org" target="_blank" class="btn btn-sm btn-custom-outline"><i class="bi bi-file-earmark-pdf me-1"></i> AIP Proceeding</a>
-                    </div>
-                </div>
-
-
-                <!-- SEKSI PUBLIKASI NASIONAL -->
-                <div class="d-flex align-items-center justify-content-between mb-3 mt-5">
-                    <h4 class="fw-bold m-0"><i class="bi bi-flag text-success me-2"></i>Publikasi Jurnal Nasional Terakreditasi</h4>
-                </div>
-
-                <!-- National Paper 1 (Curcuma) -->
-                <div class="paper-card">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <span class="tag-badge badge-national"><i class="bi bi-journal-bookmark me-1"></i> SINTA / JTROLIS</span>
-                        <span class="text-muted small fw-semibold"><i class="bi bi-calendar3 me-1"></i> 2024</span>
-                    </div>
-                    <h5 class="fw-bold text-dark lh-base mb-2">
-                        Identification of Gene Candidates in Diterpenoid Biosynthesis of Curcuma longa: An mRNA Sequencing Approach
-                    </h5>
-                    <p class="text-secondary small mb-3">
-                        <i class="bi bi-people me-1"></i> Hafizh Fadhullah, Devit Purwoko, Siti Zulaeha, <strong>Gemilang Rahmadara</strong>, dkk.
-                    </p>
-                    <p class="text-muted small mb-3"><i>Journal of Tropical Life Science</i> (JTROLIS).</p>
-                    
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://jtrolis.ub.ac.id" target="_blank" class="btn btn-sm btn-custom-outline"><i class="bi bi-link-45deg me-1"></i> Akses Jurnal</a>
-                    </div>
-                </div>
-
-                <!-- National Paper 2 (JBBI Kelapa Sawit) -->
-                <div class="paper-card">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <span class="tag-badge badge-national"><i class="bi bi-journal-bookmark me-1"></i> SINTA / JBBI</span>
-                        <span class="text-muted small fw-semibold"><i class="bi bi-calendar3 me-1"></i> 2021</span>
-                    </div>
-                    <h5 class="fw-bold text-dark lh-base mb-2">
-                        Proliferation of Oil Palm (Elaeis guineensis Jacq.) Embryogenic Callus with Repeated Subcultures in Liquid Medium
-                    </h5>
-                    <p class="text-secondary small mb-3">
-                        <i class="bi bi-people me-1"></i> <strong>Gemilang Rahmadara</strong>, dkk.
-                    </p>
-                    <p class="text-muted small mb-3"><i>Jurnal Bioteknologi & Biosains Indonesia (JBBI)</i>, 8(1).</p>
-                    
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://ejournal.brin.go.id" target="_blank" class="btn btn-sm btn-custom-outline"><i class="bi bi-file-earmark-pdf me-1"></i> Akses E-Journal</a>
-                    </div>
-                </div>
-
-                <!-- National Paper 3 (Squalen Marine Bacteria) -->
-                <div class="paper-card">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <span class="tag-badge badge-national"><i class="bi bi-journal-bookmark me-1"></i> SINTA / SQUALEN</span>
-                        <span class="text-muted small fw-semibold"><i class="bi bi-calendar3 me-1"></i> 2018</span>
-                    </div>
-                    <h5 class="fw-bold text-dark lh-base mb-2">
-                        Molecular Identification of Sponges Obtained from Seribu Islands National Park and Their Associated Bacteria Producing Antibacterial Compound
-                    </h5>
-                    <p class="text-secondary small mb-3">
-                        <i class="bi bi-people me-1"></i> Gintung Patantis, <strong>Gemilang Rahmadara</strong>, Dewi Elfidasari
-                    </p>
-                    <p class="text-muted small mb-3"><i>Squalen Bulletin of Marine and Fisheries Postharvest and Biotechnology</i>.</p>
-                    
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://repository.ipb.ac.id" target="_blank" class="btn btn-sm btn-custom-outline"><i class="bi bi-archive me-1"></i> Repositori IPB</a>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Sidebar Profil Peneliti -->
-            <div class="col-lg-4">
-                
-                <!-- Card Utama Gemilang -->
-                <div class="sidebar-card mb-4 border-primary border-2 shadow-sm" id="tim">
-                    <span class="badge bg-primary text-white mb-3">Principal Researcher</span>
-                    
-                    <div class="d-flex align-items-center gap-3 mb-3">
-                        <div class="avatar-circle-lg">GR</div>
-                        <div>
-                            <h5 class="fw-bold mb-0 text-dark">Gemilang Rahmadara</h5>
-                            <small class="text-primary fw-semibold d-block">Peneliti Bioteknologi Molekuler</small>
-                        </div>
-                    </div>
-                    
-                    <p class="small text-muted mb-3">
-                        Peneliti di Pusat Riset Botani Terapan - BRIN. Berfokus pada genomik kloroplas, isolasi DNA tanaman obat, analisis sekuensing mRNA, dan penanda molekuler.
-                    </p>
-
-                    <div class="d-grid gap-2">
-                        <a href="https://scholar.google.com" target="_blank" class="btn btn-sm btn-outline-primary text-start"><i class="bi bi-google me-2"></i> Profil Google Scholar</a>
-                        <a href="https://orcid.org" target="_blank" class="btn btn-sm btn-outline-success text-start"><i class="bi bi-patch-check me-2"></i> Akun ORCID Resmi</a>
-                    </div>
-
-                    <hr class="my-4">
-
-                    <h6 class="fw-bold mb-3 text-secondary"><i class="bi bi-people me-1"></i> Rekan Kolaborator Utama</h6>
-                    
-                    <!-- Suparjo -->
-                    <div class="d-flex align-items-center gap-2 mb-2">
-                        <div class="avatar-circle">S</div>
-                        <div class="lh-1">
-                            <span class="fw-bold small d-block">Suparjo, Ph.D.</span>
-                            <small class="text-muted" style="font-size: 0.75rem;">Genomik Tanaman</small>
-                        </div>
-                    </div>
-
-                    <!-- Dr. Teuku Tajuddin -->
-                    <div class="d-flex align-items-center gap-2 mb-2">
-                        <div class="avatar-circle">TT</div>
-                        <div class="lh-1">
-                            <span class="fw-bold small d-block">Dr. Teuku Tajuddin</span>
-                            <small class="text-muted" style="font-size: 0.75rem;">Bioteknologi</small>
-                        </div>
-                    </div>
-
-                    <!-- Devit Purwoko -->
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="avatar-circle">DP</div>
-                        <div class="lh-1">
-                            <span class="fw-bold small d-block">Devit Purwoko, M.Sc.</span>
-                            <small class="text-muted" style="font-size: 0.75rem;">Bioinformatika</small>
-                        </div>
-                    </div>
+            <!-- Wadah Publikasi Dinamis (Menampilkan Karya Utama) -->
+            <div id="publication-list" class="d-grid gap-4" aria-live="polite">
+                <div class="text-center text-muted py-5">
+                    <div class="spinner-border text-primary mb-2" role="status"></div>
+                    <p class="mb-0">Memuat katalog publikasi ilmiah...</p>
                 </div>
-
-                <!-- Informasi Kontak -->
-                <div class="sidebar-card" id="kontak">
-                    <h5 class="fw-bold mb-3"><i class="bi bi-envelope-at text-primary me-2"></i>Kontak Riset</h5>
-                    <p class="small text-muted mb-3">Hubungi untuk kolaborasi riset, sekuensing, atau konsultasi metodologi:</p>
-                    
-                    <div class="d-flex align-items-center gap-2 mb-2 small fw-semibold">
-                        <i class="bi bi-envelope text-primary fs-5"></i>
-                        <span>gemilang.rahmadara@brin.go.id</span>
-                    </div>
-                    <div class="d-flex align-items-start gap-2 small text-muted">
-                        <i class="bi bi-geo-alt text-danger fs-5"></i>
-                        <span>Pusat Riset Botani Terapan - BRIN</span>
-                    </div>
-                </div>
-
             </div>
 
+            <!-- Call to Action Banner ke publikasi.html -->
+            <div class="p-4 bg-light rounded-3 border text-center my-4 shadow-sm">
+                <h5 class="fw-bold text-dark mb-2">Ingin Mencari Publikasi Tertentu?</h5>
+                <p class="text-muted small mb-3">Gunakan fitur pencarian kata kunci, filter peran penulis, dan ekspor sitasi lengkap di repositori utama.</p>
+                <a href="publikasi.html" class="btn btn-primary px-4 rounded-3 fw-semibold">
+                    <i class="bi bi-search me-2"></i>Buka Halaman Publikasi Lengkap
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. SEKSI FOKUS & BIDANG RISET -->
+        <section class="py-5 my-4 bg-light rounded-4 p-4 p-md-5 border">
+            <div class="text-center mx-auto mb-4" style="max-width: 650px;">
+                <h3 class="fw-bold text-dark">Bidang Keahlian & Domain Riset</h3>
+                <p class="text-muted small">Landasan metodologi yang melatarbelakangi seluruh publikasi ilmiah di atas.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-4 border-0 shadow-sm">
+                        <div class="text-primary fs-2 mb-2"><i class="bi bi-dna"></i></div>
+                        <h5 class="fw-bold text-dark">Isolasi DNA & Genomik</h5>
+                        <p class="text-muted small mb-0">Eksplorasi genomik tanaman obat, optimasi ekstraksi DNA sampel metabolit sekunder tinggi, dan sekuensing.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-4 border-0 shadow-sm">
+                        <div class="text-info fs-2 mb-2"><i class="bi bi-cpu"></i></div>
+                        <h5 class="fw-bold text-dark">Bioinformatika & Analisis Data</h5>
+                        <p class="text-muted small mb-0">Pengembangan penanda molekuler (EST-SSR), analisis filogenetik, dan <em>sequence alignment</em> data NGS.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-4 border-0 shadow-sm">
+                        <div class="text-success fs-2 mb-2"><i class="bi bi-flower2"></i></div>
+                        <h5 class="fw-bold text-dark">Kultur Jaringan Tanaman</h5>
+                        <p class="text-muted small mb-0">Teknik perbanyakan mikro, mikropropagasi, dan induksi kalus embriogenik tanaman target obat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SEKSI KOLABORASI -->
+        <section id="kolaborasi" class="py-5 bg-dark text-white rounded-4 p-4 p-md-5 my-5 shadow" style="scroll-margin-top: 80px;">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <span class="badge bg-info text-dark mb-2">Joint Research & Co-Authorship</span>
+                    <h3 class="fw-bold mb-2">Tertarik Berkolaborasi Dalam Publikasi Berikutnya?</h3>
+                    <p class="text-light opacity-75 small mb-3">
+                        Berbekal pengalaman penulisan publikasi dan pengolahan data basah/kering, saya terbuka untuk penulisan bersama (<em>co-authorship</em>), perancangan metodologi molekuler, maupun analisis bioinformatika pada jurnal berreputasi.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <span class="small text-info"><i class="bi bi-check2-circle me-1"></i> Penulisan Naskah Ilmiah</span>
+                        <span class="small text-info"><i class="bi bi-check2-circle me-1"></i> Analisis Data Bioinformatika</span>
+                        <span class="small text-info"><i class="bi bi-check2-circle me-1"></i> Reviewer / Peer-Review</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="kolaborasi.html" class="btn btn-info btn-lg px-4 fw-bold text-dark rounded-3 shadow mb-2 w-100 w-lg-auto">
+                        <i class="bi bi-people-fill me-2"></i>Ajukan Kolaborasi
+                    </a>
+                    <a href="mailto:research@botergemilang.github.io" class="btn btn-outline-light btn-md px-4 rounded-3 w-100 w-lg-auto">
+                        <i class="bi bi-envelope-at-fill me-2"></i>Kirim Email
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Wadah Footer Modular -->
+    <div id="footer-container"></div>
+
+    <!-- Toast Notification untuk Sitasi -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1090;">
+        <div id="copyToast" class="toast align-items-center text-bg-dark border-0 shadow" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i> Teks sitasi berhasil disalin ke clipboard!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4 mt-5 border-top border-secondary">
-        <div class="container">
-            <p class="small text-muted mb-0">© 2026 Gemilang Rahmadara & Research Team. Portfolio Website.</p>
-        </div>
-    </footer>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script Centralized Loader & Interaksi -->
+    <script src="assets/js/publications-data.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>

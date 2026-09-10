@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: boter-gemilang.github.io # Sesuaikan dengan nama branch utama GitHub kamu (main / master)
+
+media_folder: "assets/images/uploads" # Tempat penyimpanan gambar yang di-upload
+public_folder: "assets/images/uploads" # Path panggilan gambar di kode HTML/JS
+
+collections:
+  # --------------------------------------------------
+  # Koleksi 1: Insights & Artikel Populer
+  # --------------------------------------------------
+  - name: "insights"
+    label: "Insights & Catatan Riset"
+    folder: "_insights" # Folder penyimpanan file data
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Judul Artikel", name: "title", widget: "string" }
+      - { label: "Tanggal Rilis", name: "date", widget: "datetime" }
+      - { 
+          label: "Kategori", 
+          name: "category", 
+          widget: "select", 
+          options: ["Sains Populer", "Opini & Perspektif", "Tutorial & Lab Notes"] 
+        }
+      - { label: "Estimasi Waktu Baca (misal: 5 min read)", name: "readTime", widget: "string", default: "5 min read" }
+      - { label: "Gambar Sampul/Header", name: "thumbnail", widget: "image", required: false }
+      - { label: "Ringkasan Singkat (Tampil di Card)", name: "summary", widget: "text" }
+      - { label: "Isi Lengkap Artikel", name: "body", widget: "markdown" }
+
+  # --------------------------------------------------
+  # Koleksi 2: Publikasi Ilmiah
+  # --------------------------------------------------
+  - name: "publications"
+    label: "Publikasi Ilmiah"
+    folder: "_publications"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Judul Makalah / Publikasi", name: "title", widget: "string" }
+      - { label: "Penulis (Authors)", name: "authors", widget: "string" }
+      - { label: "Jurnal / Penerbit", name: "journal", widget: "string" }
+      - { label: "Tahun", name: "year", widget: "number" }
+      - { 
+          label: "Peran Author", 
+          name: "role", 
+          widget: "select", 
+          options: ["First Author", "Co-Author"] 
+        }
+      - { 
+          label: "Cakupan Jurnal", 
+          name: "scope", 
+          widget: "select", 
+          options: ["Internasional", "Nasional Terakreditasi"] 
+        }
+      - { label: "Tautan DOI / Fulltext", name: "doi", widget: "string", required: false }
+      - { label: "Teks Sitasi (APA)", name: "citation", widget: "text", required: false }
